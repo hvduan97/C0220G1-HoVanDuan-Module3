@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>35478017</title>
+</head>
+
+<body>
+<div id='bg' style="opacity:0">
+    <audio id="xAudio" preload="auto"></audio>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+
+    // This is a simple array of strings
+    var playlist = [
+        "https://vocaroo.com/media_command.php?media=s1H9fX5GI9Fa&command=download_mp3",
+        "https://vocaroo.com/media_command.php?media=s0Ai9tr7779v&command=download_mp3",
+        "https://vocaroo.com/media_command.php?media=s1dKHkbev0dJ&command=download_mp3"
+    ];
+
+    // Remember that element must start out at opacity:0
+    // The duration should be only a number outside of the curly brackets
+    $('div#bg').animate({
+        opacity: 1
+    }, 1000);
+
+
+    $(document).ready(function() {
+        var xA = document.getElementById("xAudio");
+        xA.volume = 0.3;
+        xA.controls = true;
+
+
+        function player(x) {
+            var i = 0;
+            xA.src = playlist[x]; // x is the index number of the playlist array
+            xA.load();            // use the load method when changing src
+            xA.play();
+            xA.onended = function() { // Once the initial file is played it plays the rest of the files
+                /* This would be better as a 'for' loop */
+                i++;
+                if (i > 2) {            //         ... Repeat
+                    i = 0;                //         ^
+                }                       //         ^
+                xA.src = playlist[i];   // Rinse,  ^
+                xA.load();              // Lather, ^
+                xA.play();              // and.....^
+            }
+        }
+        player(0); // Call the player() function at 0 index of playlist array
+    });
+</script>
+</body>
+
+</html>

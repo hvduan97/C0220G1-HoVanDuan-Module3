@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
+</head>
+<body>
+<h1>Search Repo</h1>
+<input id="keyword" placeholder="Enter name repo" value="">
+<button onclick="search(document.getElementById('keyword').value)">Search</button>
+<br>
+<table>
+</table>
+<script src="index.js"></script>
+</body>
+</html>

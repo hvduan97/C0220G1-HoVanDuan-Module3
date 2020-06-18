@@ -1,0 +1,18 @@
+<p>color works!</p>
+<h2>Color Picker</h2>
+<div>
+  <label>Chọn màu:</label>
+  <input [value]="background" type="color" (change)="onChange($event.target.value)">
+</div>
+
+<p>Output:</p>
+<div class="color-preview" [style.background]="background" style="width: 500px;height: 10px">
+
+</div>
+<br>
+<br>
+<div >
+  Gõ nội dung:
+  <input type="text" [(ngModel)]="abc"><br><br>
+  <div>Hiển thị: <b [style.color]="background">{{abc}}</b></div>
+</div>
