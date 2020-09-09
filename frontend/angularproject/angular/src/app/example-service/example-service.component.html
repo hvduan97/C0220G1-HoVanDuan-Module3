@@ -1,0 +1,5 @@
+<p>example-service works!</p>
+<ng-container *ngFor="let student of studentList">
+  <a [routerLink]="['/student-detail',student.id]">{{student.name}}</a><br>
+</ng-container>
+<router-outlet></router-outlet>

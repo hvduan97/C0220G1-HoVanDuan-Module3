@@ -1,0 +1,80 @@
+
+<h2 class="text-center">Cập nhật thông tin khách hàng</h2>
+<form focusInvalidInput [formGroup]="customerForm" (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3">
+  <div class="form-group row">
+    <label class="col">
+      Tên khách hàng:
+      <input type="text" class="form-control" formControlName="name">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="customerForm.get('name').invalid && customerForm.get('name').touched">
+    <span *ngIf="customerForm.get('name').hasError('required')">Bạn phải điền nội dung</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Ngày sinh:
+      <input type="date" class="form-control" formControlName="dateOfBirth">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="customerForm.get('dateOfBirth').invalid && customerForm.get('dateOfBirth').touched">
+    <span *ngIf="customerForm.get('dateOfBirth').hasError('required')">Bạn phải điền nội dung</span>
+    <span *ngIf="customerForm.get('dateOfBirth').hasError('pattern')">Ngày sinh phải đúng định dạng ngày giờ theo format DD/MM/YYYY</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      CMND:
+      <input type="text" class="form-control" formControlName="idCard">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="customerForm.get('idCard').invalid && customerForm.get('idCard').touched">
+    <span *ngIf="customerForm.get('idCard').hasError('required')">Bạn phải điền nội dung</span>
+    <span *ngIf="customerForm.get('idCard').hasError('pattern')">Số CMND phải đúng định dạng XXXXXXXXX hoặc XXXXXXXXXXXX (X là số 0-9</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Điện thoại
+      <input type="text" class="form-control" formControlName="phone">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="customerForm.get('phone').invalid && customerForm.get('phone').touched">
+    <span *ngIf="customerForm.get('phone').hasError('required')">Bạn phải điền nội dung</span>
+    <span *ngIf="customerForm.get('phone').hasError('pattern')">Số điện thoại phải đúng định dạng 090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Email
+      <input type="email" class="form-control" formControlName="email">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="customerForm.get('email').invalid && customerForm.get('email').touched">
+    <span *ngIf="customerForm.get('email').hasError('required')">Bạn phải điền nội dung</span>
+    <span *ngIf="customerForm.get('email').hasError('pattern')">Địa chỉ email phải có định dạng abc@xyz.ijk</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Địa chỉ
+      <input type="text" class="form-control" formControlName="address">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="customerForm.get('address').invalid && customerForm.get('address').touched">
+    <span *ngIf="customerForm.get('address').hasError('required')">Bạn phải điền nội dung</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Loại dịch vụ
+      <select formControlName="typeCus" class="form-control">
+        <option value="">Chọn</option>
+        <ng-container *ngFor="let typecustomer of typecustomers">
+          <option value="{{typecustomer.name}}">{{typecustomer.name}}</option>
+        </ng-container>
+      </select>
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="customerForm.get('typeCus').invalid && customerForm.get('typeCus').touched">
+    <span *ngIf="customerForm.get('typeCus').hasError('required')">Bạn phải điền nội dung</span>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-info" type="submit">Thêm</button>
+  </div>
+</form>
+

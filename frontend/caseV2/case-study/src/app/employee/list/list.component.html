@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-md-2">
+
+  </div>
+  <div class="col-md-8">
+    <ng-container>
+      <nav class="navbar">
+        <input class="form-control" type="text" name="search" [(ngModel)]="term" placeholder="Tìm kiếm">
+      </nav>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col" sortable="name" >Mã nhân viên</th>
+          <th scope="col" sortable="name" >Tên nhân viên</th>
+          <th scope="col" sortable="name" >Email</th>
+          <th scope="col" sortable="population" >Xem thông tin</th>
+          <th scope="col" sortable="population" >Cập nhật</th>
+          <th scope="col" sortable="population" >Xóa</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr *ngFor="let employee of employeeList| filter:term | paginate: { itemsPerPage: 1, currentPage: p }">
+          <th scope="row">{{ employee.code }}</th>
+          <td scope="row">{{ employee.name }}</td>
+          <td scope="row">{{ employee.email }}</td>
+          <td scope="row">
+            <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic">
+              <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" [routerLink]="['/employee-detail', employee.id]"> Xem thông tin
+              </label>
+            </div>
+          </td>
+          <td scope="row">
+            <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic">
+              <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" [routerLink]="['/employee-edit', employee.id]"> Cập nhật
+              </label>
+            </div>
+          </td>
+          <td scope="row">
+            <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" >
+              <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" (click)="deleteById(employee.id)"> Xóa
+              </label>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+        <pagination-controls (pageChange)="p = $event" class="pag position-fixed"></pagination-controls>
+      </table>
+    </ng-container>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="col-md-2">
+
+  </div>
+</div>

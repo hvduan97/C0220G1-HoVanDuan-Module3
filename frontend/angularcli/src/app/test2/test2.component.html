@@ -1,0 +1,105 @@
+<!--&lt;!&ndash;&lt;!&ndash;<form [formGroup]="form" (ngSubmit)="onSubmit()">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  <table border="1px">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <thead>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <th>dghag</th>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <th>dghag</th>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <th>dghag</th>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </thead>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <tbody>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <div formArrayName="cities">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <div *ngFor="let city of cities.controls; index as i">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <tr>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <td>dhaj</td>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <td>dhaj</td>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <td>dhaj</td>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;      <td class="form-control form-control-sm"></td>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;      <td class="form-control form-control-sm"></td>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;      <td class="form-control form-control-sm"></td>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </tr>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </tbody>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;  </table>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  <button>Submit</button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</form>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;<button (click)="addCity()">Add City</button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<button (click)="setPreset()">Set preset</button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<button type="button" (click)="addCity()" class="btn btn-primary">Add new Row</button>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<form [formGroup]="form">&ndash;&gt;-->
+<!--&lt;!&ndash;  <table border=1>&ndash;&gt;-->
+<!--&lt;!&ndash;    <thead>&ndash;&gt;-->
+<!--&lt;!&ndash;    <th>Id</th>&ndash;&gt;-->
+<!--&lt;!&ndash;    <th>Name</th>&ndash;&gt;-->
+<!--&lt;!&ndash;    <th>Action</th>&ndash;&gt;-->
+<!--&lt;!&ndash;    <th>Action</th>&ndash;&gt;-->
+<!--&lt;!&ndash;    <th>Action</th>&ndash;&gt;-->
+<!--&lt;!&ndash;    </thead>&ndash;&gt;-->
+<!--&lt;!&ndash;    <tbody >&ndash;&gt;-->
+<!--&lt;!&ndash;    <tr *ngFor="let city of cities.controls; index as i" formArrayName="cities">&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input class="form-control">&ndash;&gt;-->
+<!--&lt;!&ndash;      </td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input class="form-control">&ndash;&gt;-->
+<!--&lt;!&ndash;      </td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input class="form-control">&ndash;&gt;-->
+<!--&lt;!&ndash;      </td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input class="form-control">&ndash;&gt;-->
+<!--&lt;!&ndash;      </td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input class="form-control">&ndash;&gt;-->
+<!--&lt;!&ndash;      </td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;    <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;    <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;    <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>djajdhaj</td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tbody>&ndash;&gt;-->
+<!--&lt;!&ndash;  </table>&ndash;&gt;-->
+<!--&lt;!&ndash;</form>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<br/>&ndash;&gt;-->
+<!--&lt;!&ndash;<br/>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<pre>{{invoiceForm.value | json}}</pre>&ndash;&gt;&ndash;&gt;-->
+
+
+<!--// app.component.html-->
+<!--<form [formGroup]="ngForm" >-->
+<!--  <app-test2 [control]="ngForm.get('start')">-->
+<!--    <input pInputText formControlName="start">-->
+<!--  </app-test2>-->
+
+<!--  <app-test2 [control]="ngForm.get('end')">-->
+<!--    <input pInputText formControlName="end">-->
+<!--  </app-test2>-->
+
+<!--  <app-test2 [control]="ngForm.get('city')">-->
+<!--    <input pInputText formControlName="city">-->
+<!--  </app-test2>-->
+<!--</form>-->
+<ng-template #popContent>Hello, <b>Popover</b>! content</ng-template>
+
+<input  [ngbTooltip]="popContent" placeholder="abc">
+

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thống kê theo tháng</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container-fluid">
+
+    <div id="title5">
+        <div class="h3 header-text-color"><span>TOP <span class="top5">5</span> MẶT HÀNG BÁN CHẠY</span></div>
+    </div>
+
+    <form>
+        <div class="row mt-3 px-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <label class="input-group-text font-weight-bold text-dark" for="inputGroupSelect01">Tháng</label>
+                </div>
+                <select class="custom-select" #selectedWareHouse id="inputGroupSelect01">
+                    <option selected value="">1</option>
+                    <option selected value="">2</option>
+                    <option selected value="">3</option>
+                    <option selected value="">4</option>
+                    <option selected value="">5</option>
+                    <option selected value="">6</option>
+                    <option selected value="">7</option>
+                    <option selected value="">8</option>
+                    <option selected value="">9</option>
+                    <option selected value="">10</option>
+                    <option selected value="">11</option>
+                    <option selected value="">12</option>
+                </select>
+                <div class="input-group-prepend">
+                    <label class="input-group-text font-weight-bold text-dark" for="inputGroupSelect02">Năm</label>
+                </div>
+                <select class="custom-select" #selectedEmployees id="inputGroupSelect02">
+                    <option selected value="">2012</option>
+                    <option selected value="">2013</option>
+                    <option selected value="">2014</option>
+                    <option selected value="">2015</option>
+                    <option selected value="">2016</option>
+                    <option selected value="">2017</option>
+                    <option selected value="">2018</option>
+                    <option selected value="">2019</option>
+                    <option selected value="">2020</option>
+                </select>
+                <button class="btn btn-primary btn-filter-custom"><i class="fa fa-search" aria-hidden="true"></i> Tìm kiếm
+                </button>
+            </div>
+        </div>
+    </form>
+    <div class="row mt-3 px-3">
+        <!--Table list bill-->
+        <table class="table table-bordered table-striped mt-3">
+            <thead class="table-header">
+            <tr>
+                <th class="sticky-top sort-product-name">STT</th>
+                <th class="sticky-top">Tên mặt hàng <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th class="sticky-top">Danh mục <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th class="sticky-top">Thương hiệu <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th class="sticky-top">Số lượng <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th class="sticky-top">Đơn giá <i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th class="sticky-top">Doanh thu <i class="fa fa-sort" aria-hidden="true"></i></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>1</span>
+                </td>
+                <td>
+                    <span>Chocopie</span>
+                </td>
+                <td>
+                    <span>Bánh</span>
+                </td>
+                <td>
+                    <span>Orion</span>
+                </td>
+                <td>
+                    <span>5000</span>
+                </td>
+                <td>
+                    <span>20000</span>
+                </td>
+                <td>
+                    <span>xxx</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>2</span>
+                </td>
+                <td>
+                    <span>Chocopie</span>
+                </td>
+                <td>
+                    <span>Bánh</span>
+                </td>
+                <td>
+                    <span>Orion</span>
+                </td>
+                <td>
+                    <span>5000</span>
+                </td>
+                <td>
+                    <span>20000</span>
+                </td>
+                <td>
+                    <span>xxx</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>3</span>
+                </td>
+                <td>
+                    <span>Chocopie</span>
+                </td>
+                <td>
+                    <span>Bánh</span>
+                </td>
+                <td>
+                    <span>Orion</span>
+                </td>
+                <td>
+                    <span>5000</span>
+                </td>
+                <td>
+                    <span>20000</span>
+                </td>
+                <td>
+                    <span>xxx</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>4</span>
+                </td>
+                <td>
+                    <span>Chocopie</span>
+                </td>
+                <td>
+                    <span>Bánh</span>
+                </td>
+                <td>
+                    <span>Orion</span>
+                </td>
+                <td>
+                    <span>5000</span>
+                </td>
+                <td>
+                    <span>20000</span>
+                </td>
+                <td>
+                    <span>xxx</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>5</span>
+                </td>
+                <td>
+                    <span>Chocopie</span>
+                </td>
+                <td>
+                    <span>Bánh</span>
+                </td>
+                <td>
+                    <span>Orion</span>
+                </td>
+                <td>
+                    <span>5000</span>
+                </td>
+                <td>
+                    <span>20000</span>
+                </td>
+                <td>
+                    <span>xxx</span>
+                </td>
+            </tr>
+            </tbody>
+            <br>
+            <br>
+
+
+        </table>
+</div>
+    <div class="d flex justin-center">
+        <button class="btn btn-primary btn-filter-custom">In
+        </button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<p>Dictionary</p>
+<ng-container>
+  <input type="text" [(ngModel)]="keyword">
+  <button class="form-input" (click)="check()">
+    Translate
+  </button>
+  <p>{{result}}</p>
+</ng-container>
+<ng-container *ngFor="let dictionary of dictionaryList">
+  <a [routerLink]="['/dictionary-detail', dictionary.key]">{{dictionary.key}}</a>
+  <br>
+</ng-container>
+<router-outlet></router-outlet>
+

@@ -1,0 +1,4 @@
+<app-search (groupFilters)="filters = $event"
+            (autoSearch)="searchText = $event"></app-search>
+<app-list [groupFilters]="filters"
+          [searchByKeyword]="searchText"></app-list>

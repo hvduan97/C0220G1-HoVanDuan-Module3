@@ -1,0 +1,155 @@
+<form [formGroup]="serForm" (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3">
+  <div class="form-group row">
+    <div class="col">
+      Chọn loại dịch vụ bạn muốn sử dụng:&nbsp;&nbsp;
+      <label><input type="radio" formControlName="typeService" value="Room" (change)="getType()" checked>Room</label>&nbsp;&nbsp;
+      <label><input type="radio" formControlName="typeService" value="House" (change)="getType()">House</label>&nbsp;&nbsp;
+      <label><input type="radio" formControlName="typeService" value="Villa" (change)="getType()">Villa</label>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col">
+      Name
+      <input type="text" class="form-control" formControlName="name">
+    </label>
+  </div>
+  <div class="alert-danger" role="alert" *ngIf="serForm.get('name').invalid && serForm.get('name').touched">
+    Bạn phải điền nội dung
+  </div>
+
+  <div class="form-group row">
+    <label class="col">
+      Diện tích sử dụng
+      <input type="number" class="form-control" formControlName="area">
+    </label>
+  </div>
+  <div class="alert-danger" role="alert" *ngIf="serForm.get('area').invalid && serForm.get('area').touched">
+    Bạn phải điền nội dung
+  </div>
+
+  <div class="form-group row">
+    <label class="col">
+      Chi phí thuê
+      <input type="text" class="form-control" formControlName="rentCost">
+    </label>
+  </div>
+  <div class="alert-danger" role="alert" *ngIf="serForm.get('rentCost').invalid && serForm.get('rentCost').touched">
+    Bạn phải điền nội dung
+  </div>
+
+  <div class="form-group row">
+    <label class="col">
+      Số người tối đa
+      <input type="text" class="form-control" formControlName="maxPeople">
+    </label>
+  </div>
+  <div class="alert-danger" role="alert" *ngIf="serForm.get('maxPeople').invalid && serForm.get('maxPeople').touched">
+    Bạn phải điền nội dung
+  </div>
+
+  <div class="form-group row">
+    <label class="col">
+      Kiểu thuê
+      <select formControlName="rentType" class="form-control">
+        <option value="">Chọn</option>
+        <ng-container *ngFor="let t of typeRents">
+          <option value="{{t.name}}">{{t.name}}</option>
+        </ng-container>
+      </select>
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="serForm.get('rentType').invalid && serForm.get('rentType').touched">
+    <span *ngIf="serForm.get('rentType').hasError('required')">Bạn phải điền nội dung</span>
+  </div>
+
+  <ng-container *ngIf="typeService=='Villa'" style="visibility: visible">
+    <div class="form-group row">
+      <label class="col">
+        Tiêu chuẩn phòng
+        <input type="text" class="form-control" formControlName="standRoom">
+      </label>
+    </div>
+    <div class="alert-danger" role="alert" *ngIf="serForm.get('standRoom').invalid && serForm.get('standRoom').touched">
+      Bạn phải điền nội dung
+    </div>
+
+    <div class="form-group row">
+      <label class="col">
+        Mô tả tiện nghi khác
+        <input type="text" class="form-control" formControlName="description">
+      </label>
+    </div>
+    <div class="alert-danger" role="alert" *ngIf="serForm.get('description').invalid && serForm.get('description').touched">
+      Bạn phải điền nội dung
+    </div>
+
+    <div class="form-group row">
+      <label class="col">
+        Diện tích hồ bơi
+        <input type="number" class="form-control" formControlName="areaPool">
+      </label>
+    </div>
+    <div class="alert-danger" role="alert" *ngIf="serForm.get('areaPool').invalid && serForm.get('areaPool').touched">
+      Bạn phải điền nội dung
+    </div>
+
+    <div class="form-group row">
+      <label class="col">
+        Số tầng
+        <input type="number" class="form-control" formControlName="numberFloor">
+      </label>
+    </div>
+    <div class="alert-danger" role="alert" *ngIf="serForm.get('numberFloor').invalid && serForm.get('numberFloor').touched">
+      Bạn phải điền nội dung
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="typeService=='House'" style="visibility: visible">
+    <div class="form-group row">
+      <label class="col">
+        Tiêu chuẩn phòng
+        <input type="text" class="form-control" formControlName="standRoom">
+      </label>
+    </div>
+    <div class="alert-danger" role="alert" *ngIf="serForm.get('standRoom').invalid && serForm.get('standRoom').touched">
+      Bạn phải điền nội dung
+    </div>
+
+    <div class="form-group row">
+      <label class="col">
+        Mô tả tiện nghi khác
+        <input type="text" class="form-control" formControlName="description">
+      </label>
+    </div>
+    <div class="alert-danger" role="alert" *ngIf="serForm.get('description').invalid && serForm.get('description').touched">
+      Bạn phải điền nội dung
+    </div>
+
+    <div class="form-group row">
+      <label class="col">
+        Số tầng
+        <input type="number" class="form-control" formControlName="numberFloor">
+      </label>
+    </div>
+    <div class="alert-danger" role="alert" *ngIf="serForm.get('numberFloor').invalid && serForm.get('numberFloor').touched">
+      Bạn phải điền nội dung
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="typeService=='Room'" style="visibility: visible">
+    <div class="form-group row">
+      <label class="col">
+        Dịch vụ miễn phí đi kèm
+        <input type="text" class="form-control" formControlName="freeService">
+      </label>
+    </div>
+    <div class="alert-danger" role="alert" *ngIf="serForm.get('freeService').invalid && serForm.get('freeService').touched">
+      Bạn phải điền nội dung
+    </div>
+  </ng-container>
+
+  <div class="form-group">
+    <button class="btn btn-info" type="submit">Thêm</button>
+  </div>
+</form>

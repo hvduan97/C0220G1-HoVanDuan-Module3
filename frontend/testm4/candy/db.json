@@ -1,0 +1,179 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Nick Jonas",
+      "prefix": "MR",
+      "email": "nick@gmail.com",
+      "position": "admin",
+      "gender": "M"
+    },
+    {
+      "id": 2,
+      "name": "Selena Gomez",
+      "prefix": "MS",
+      "email": "selena@gmail.com",
+      "position": "admin",
+      "gender": "F"
+    },
+    {
+      "id": 3,
+      "name": "Will Smith",
+      "prefix": "MR",
+      "email": "will@gmail.com",
+      "position": "student",
+      "gender": "M"
+    },
+    {
+      "id": 4,
+      "name": "Demi Lovato",
+      "prefix": "MS",
+      "email": "demi@gmail.com",
+      "position": "admin",
+      "gender": "F"
+    },
+    {
+      "id": 5,
+      "name": "Ariana Grande",
+      "prefix": "MS",
+      "email": "ariana@gmail.com",
+      "position": "student",
+      "gender": "F"
+    }
+  ],
+  "phieu": [
+    {
+      "id": 1,
+      "TenPhieu": "json-server",
+      "MaKho": "typicode",
+      "MaPhieu": "typicode",
+      "TinhTrang": "typicode",
+      "Ngay": "typicode",
+      "TrangThaiXL": "typicode",
+      "TrangThaiTT": "typicode",
+      "TrangThaiVC": "typicode",
+      "TenKho": "abcxyz"
+    },
+    {
+      "id": 2,
+      "TenPhieu": "json-server",
+      "MaKho": "typicode",
+      "MaPhieu": "typicode",
+      "TinhTrang": "typicode",
+      "Ngay": "typicode",
+      "TrangThaiXL": "typicode",
+      "TrangThaiTT": "typicode",
+      "TrangThaiVC": "typicode",
+      "TenKho": "abcxyz"
+    },
+    {
+      "id": 3,
+      "TenPhieu": "json-server",
+      "MaKho": "typicode",
+      "MaPhieu": "typicode",
+      "TinhTrang": "typicode",
+      "Ngay": "typicode",
+      "TrangThaiXL": "typicode",
+      "TrangThaiTT": "typicode",
+      "TrangThaiVC": "typicode",
+      "TenKho": "abcxyz"
+    }
+  ],
+  "doi-tac": [
+    {
+      "id": 1,
+      "TenDT": "some comment",
+      "MaDT": "some comment 111"
+    },
+    {
+      "id": 2,
+      "TenDT": "some comment",
+      "MaDT": "some comment 111"
+    },
+    {
+      "id": 3,
+      "TenDT": "some comment",
+      "MaDT": "some comment 111"
+    }
+  ],
+  "nhan-vien": [
+    {
+      "id": 1,
+      "TenNV": "typicode",
+      "MaNV": "typicode"
+    },
+    {
+      "id": 2,
+      "TenNV": "typicode",
+      "MaNV": "typicode"
+    },
+    {
+      "id": 3,
+      "TenNV": "typicode",
+      "MaNV": "typicode"
+    }
+  ],
+  "ten-thanh-toan": [
+    {
+      "id": 1,
+      "TenTT": "typicode"
+
+    },
+    {
+      "id": 2,
+      "TenTT": "typicode"
+    },
+    {
+      "id": 3,
+      "TenTT": "typicode"
+    }
+  ],
+  "van-chuyen": [
+    {
+      "id": 1,
+      "TenVC": "typicode",
+      "MaVC": "typicode"
+
+    },
+    {
+      "id": 2,
+      "TenVC": "typicode",
+      "MaVC": "typicode"
+    },
+    {
+      "id": 3,
+      "TenVC": "typicode",
+      "MaVC": "typicode"
+    }
+  ],
+  "vi-tri-luu-tru": [
+    {
+      "id": 1,
+      "MaVT": "typicode"
+
+    },
+    {
+      "id": 2,
+      "MaVT": "typicode"
+    },
+    {
+      "id": 3,
+      "MaVT": "typicode"
+    }
+  ],
+  "quanlyphieu": [
+    {
+      "id": 1,
+      "TenLoaiPhieu": "typicode"
+
+    },
+    {
+      "id": 2,
+      "TenLoaiPhieu": "typicode"
+    },
+    {
+      "id": 3,
+      "TenLoaiPhieu": "typicode"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <br>
+        <div class="row nab padNab">
+            <div class="col-2 nab nab1 buttonStatic">
+                <a href="" class="pag"><b>Quản lý phòng họp</b></a>
+            </div>
+            <div class="col-2 nab nab2 buttonStatic">
+                <a href="" class="pag"><b>Quản lý tài sản</b></a>
+            </div>
+            <div class="col-2 nab nab2 buttonStatic">
+                <a href="" class="pag"><b>Quản lý người dùng</b></a>
+            </div>
+            <div class="col-2 nab nab2 buttonStatic">
+                <a href="" class="pag"><b>Thống kê</b></a>
+            </div>
+            <div class="col-2 nab nab2 buttonStatic">
+                <a href="" class="pag"><b>Xem phản hồi</b></a>
+            </div>
+            <div class="col-2 nab nab2 nabAdmin">
+                <a href="" class="pag"><b>Admin  <i class="fas fa-sort-down"></i></b></a>
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+        <div class="row searchFollow">
+            <div class="col-6 rColMain">
+                <div class="rCol">
+                    <div class="titleIn">Theo thời gian</div>
+                    <br>
+                    <div class="row paddingIn">
+                        <div class="col-6">
+                            Từ ngày: <input type="date" class="inputRound form-control form-control-sm">
+                        </div>
+                        <div class="col-6">
+                            Đến ngày: <input type="date" class="inputRound form-control form-control-sm">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row paddingIn">
+                        <div class="col-12">
+                            <button type="button" class="buttonStatic pag btn">Thống kê</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 rColMain">
+                <div class="rCol">
+                    <div class="titleIn">Theo phòng</div>
+                    <div class="row paddingIn">
+                        <div class="col-6">
+                            Chọn loại phòng:
+                            <select class="inputRound form-control form-control-sm">
+                                <option value="">Chọn loại phòng</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            Chọn phòng:
+                            <select class="inputRound form-control form-control-sm">
+                                <option value="">Chọn phòng</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row paddingIn">
+                        <div class="col-3">
+                            Thống kê theo:
+                        </div>
+                        <div class="col-3">
+                            <select class="inputRound form-control form-control-sm">
+                                <option value="">Ngày</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <select class="inputRound form-control form-control-sm">
+                                <option value="">Tháng</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" placeholder="Năm" class="inputRound form-control form-control-sm">
+                        </div>
+                    </div>
+
+                    <div class="row paddingIn">
+                        <div class="col-12 buttonTK">
+                            <button type="button" class="buttonStatic buttonTK2 btn pag">Thống kê</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row resultFollow" >
+            <div class="col-12 resultSearch">
+                <div class="result">
+                    <div class="titleIn2">Kết quả</div>
+                    <div class="row paddingInResult">
+                        <span>Tên phòng: 6.5.A</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span>Tổng số lần sử dụng: 100</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span>Hiệu suất: 80%</span>
+                    </div>
+                    <br>
+                    <div class="row paddingIn">
+                        <table class="table table-hover table-striped" border="1px">
+                            <thead class="buttonStatic">
+                            <tr>
+                                <th scope="col">STT</th>
+                                <th scope="col">Tên người đăng kí</th>
+                                <th scope="col">Thời gian bắt đầu</th>
+                                <th scope="col">Thời gian kết thúc</th>
+                                <th scope="col">Ngày bắt đầu</th>
+                                <th scope="col">Ngày kết thúc</th>
+                                <th scope="col">Trạng thái</th>
+                                <th scope="col">Ngày đăng kí</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Hồ Văn Duẫn</td>
+                                <td>8:00</td>
+                                <td>9:00</td>
+                                <td>21/7/2020</td>
+                                <td>21/7/2020</td>
+                                <td>Còn trống</td>
+                                <td>15/07/2020</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Trần Chí Hiếu</td>
+                                <td>7:00</td>
+                                <td>9:00</td>
+                                <td>20/7/2020</td>
+                                <td>25/7/2020</td>
+                                <td>Còn trống</td>
+                                <td>19/07/2020</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Nguyễn Văn Nhân</td>
+                                <td>13:00</td>
+                                <td>15:00</td>
+                                <td>20/08/2020</td>
+                                <td>24/08/2020</td>
+                                <td>Còn trống</td>
+                                <td>01/08/2020</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Lê Hoàng Hà</td>
+                                <td>10:00</td>
+                                <td>11:00</td>
+                                <td>24/08/2020</td>
+                                <td>24/08/2020</td>
+                                <td>Còn trống</td>
+                                <td>17/08/2020</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row paddingIn pag1">
+                        <div class="pag2">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Trước</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

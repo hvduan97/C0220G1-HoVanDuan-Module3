@@ -1,0 +1,43 @@
+<div class="col-md-2" [formGroup]="addForm">
+  <div class="form-group">
+    <label class="label-control">Items</label>
+    <br>
+    <label class="switch">
+      <input type="checkbox" class="form-control" formControlName="items">
+      <span class="slider round">
+      <span class="on">
+        {{addForm.value.items_value}}
+      </span>
+      <span class="off">
+        {{addForm.value.items_value}}
+      </span>
+    </span>
+    </label>
+
+    <table>
+      <thead>
+      <button (click)="onAddRow()">add row</button>
+      </thead>
+      <tbody>
+      <tr *ngFor="let row of rows;let index = index;">
+        <td>
+          name : <input class="form-control">
+        </td>
+        <td>
+          description : <input class="form-control">
+        </td>
+        <td>
+          qty : <input class="form-control">
+        </td>
+        <td>
+          <button (click)="onRemoveRow(index)">Remove</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+</div>
+
+<pre>{{rows.value | json}}</pre>

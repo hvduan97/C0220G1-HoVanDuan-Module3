@@ -1,0 +1,192 @@
+{
+  "room": [
+    {
+      "id": 1,
+      "name": "Room",
+      "area": 2,
+      "rentCost": "1",
+      "maxPeople": "2",
+      "rentType": "Năm",
+      "typeService": "Room",
+      "standRoom": "",
+      "description": "",
+      "areaPool": "",
+      "numberFloor": "",
+      "freeService": "kara"
+    }
+  ],
+  "villa": [
+    {
+      "id": 1,
+      "name": "Villa",
+      "area": 4,
+      "rentCost": "5",
+      "maxPeople": "4",
+      "rentType": "Giờ",
+      "typeService": "Villa",
+      "standRoom": "chuẩn",
+      "description": "aaa",
+      "areaPool": 5,
+      "numberFloor": 4,
+      "freeService": ""
+    }
+  ],
+  "house": [
+    {
+      "id": 1,
+      "name": "House",
+      "area": 5,
+      "rentCost": "2",
+      "maxPeople": "21",
+      "rentType": "Ngày",
+      "typeService": "House",
+      "standRoom": "chuẩn",
+      "description": "abc gì đó",
+      "areaPool": "",
+      "numberFloor": 3,
+      "freeService": ""
+    }
+  ],
+  "type-rent": [
+    {
+      "id": 1,
+      "name": "Năm"
+    },
+    {
+      "id": 2,
+      "name": "Tháng"
+    },
+    {
+      "id": 3,
+      "name": "Ngày"
+    },
+    {
+      "id": 4,
+      "name": "Giờ"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "code": "NV-4443",
+      "name": "Nguyễn A",
+      "dateOfBirth": "1997-02-02",
+      "idCard": "123456789",
+      "phone": "0908765432",
+      "email": "ajj@aa.com",
+      "address": "Huế",
+      "salary": "12",
+      "position": "Quản lý",
+      "level": "Đại học",
+      "part": "Quản lý"
+    }
+  ],
+  "position": [
+    {
+      "id": 1,
+      "name": "Lễ tân"
+    },
+    {
+      "id": 2,
+      "name": "Phục vụ"
+    },
+    {
+      "id": 3,
+      "name": "Chuyên viên"
+    },
+    {
+      "id": 4,
+      "name": "Giám sát"
+    },
+    {
+      "id": 5,
+      "name": "Quản lý"
+    },
+    {
+      "id": 6,
+      "name": "Giám đốc"
+    }
+  ],
+  "level": [
+    {
+      "id": 1,
+      "name": "Trung cấp"
+    },
+    {
+      "id": 2,
+      "name": "Cao đẳng"
+    },
+    {
+      "id": 3,
+      "name": "Đại học"
+    },
+    {
+      "id": 4,
+      "name": "Sau đại học"
+    }
+  ],
+  "part": [
+    {
+      "id": 1,
+      "name": "Sale-Marketing"
+    },
+    {
+      "id": 2,
+      "name": "Hành chính"
+    },
+    {
+      "id": 3,
+      "name": "Phục vụ"
+    },
+    {
+      "id": 4,
+      "name": "Quản lý"
+    }
+  ],
+  "customerList": [
+    {
+      "id": 2,
+      "code": "KH-4411",
+      "name": "Kiều Sơn Hải",
+      "dateOfBirth": "1996-06-09",
+      "idCard": "132546576",
+      "phone": "0911234567",
+      "email": "abc@yhh.com",
+      "address": "Hue",
+      "typeCus": "Diamond"
+    },
+    {
+      "id": 3,
+      "code": "KH-9971",
+      "name": "Nguyễn Văn A",
+      "dateOfBirth": "2020-07-17",
+      "idCard": "123456789",
+      "phone": "0909876543",
+      "email": "abc@ag.con",
+      "address": "Vinh Thanh",
+      "typeCus": "Platinium"
+    }
+  ],
+  "typeCustomer": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ]
+}

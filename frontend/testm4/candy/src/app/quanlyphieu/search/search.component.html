@@ -1,0 +1,60 @@
+<form novalidate
+      [formGroup]="form">
+
+  <h3>Auto Search</h3>
+  <input type="text"
+         class="form-control"
+         #searchText
+         (input)="autoSearch.emit(searchText.value)" >
+
+  <hr/>
+
+  <h3>Group Filter</h3>
+  <div class="row">
+    <div class="col-md-3 col-sm-3">
+      <select class="form-control"
+              formControlName="TenKho">
+        <option value="">Chọn</option>
+        <ng-container *ngFor="let typecustomer of tenkhos">
+          <option value="{{typecustomer.TenKho}}">{{typecustomer.TenKho}}</option>
+        </ng-container>
+      </select>
+    </div>
+
+    <div class="col-md-3 col-sm-3">
+      <select class="form-control"
+              formControlName="TenDT">
+        <option value="">Chọn</option>
+        <ng-container *ngFor="let abc of doiTacs">
+          <option value="{{abc.TenDT}}">{{abc.TenDT}}</option>
+        </ng-container>
+      </select>
+    </div>
+
+    <div class="col-md-3 col-sm-3">
+      <select class="form-control"
+              formControlName="TenNV">
+        <option value="">Chọn</option>
+        <ng-container *ngFor="let a of nhanViens">
+          <option value="{{a.TenNV}}">{{a.TenNV}}</option>
+        </ng-container>
+      </select>
+    </div>
+
+    <div class="col-md-3 col-sm-3">
+      <select class="form-control"
+              formControlName="TenVC">
+        <option value="">Chọn</option>
+        <ng-container *ngFor="let b of vanChuyens">
+          <option value="{{b.TenVC}}">{{b.TenVC}}</option>
+        </ng-container>
+      </select>
+    </div>
+
+    <div class="col-md-3 col-sm-3">
+      <button class="btn btn-primary"
+              (click)="search(form.value)">Search</button>
+    </div>
+  </div>
+
+</form><br/>

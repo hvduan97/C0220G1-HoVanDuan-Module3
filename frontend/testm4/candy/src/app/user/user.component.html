@@ -1,0 +1,9 @@
+<div class="container">
+  <app-search-user (groupFilters)="filters = $event"
+                   (autoSearch)="searchText = $event"></app-search-user>
+
+  <br/>
+
+  <app-user-list [groupFilters]="filters"
+                 [searchByKeyword]="searchText"></app-user-list>
+</div>

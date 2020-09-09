@@ -20,7 +20,7 @@ export class CalculatorComponent implements OnInit{
         break;
       case '/': {
         if (this.second === 0) {
-        this.output = 'You can divide by zero';
+        this.output = 'You can\'t divide by zero';
         } else {this.output = this.first / this.second; }}
                 break;
     }

@@ -1,0 +1,120 @@
+<h2 class="text-center">Thêm nhân viên mới</h2>
+<form  [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3">
+  <div class="form-group row">
+    <label class="col">
+      Tên nhân viên:
+      <input type="text" class="form-control" formControlName="name">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="employeeForm.get('name').invalid && employeeForm.get('name').touched">
+    <span *ngIf="employeeForm.get('name').hasError('required')">Bạn phải điền nội dung</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Lương:
+      <input type="text" class="form-control" formControlName="salary">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="employeeForm.get('salary').invalid && employeeForm.get('salary').touched">
+    <span *ngIf="employeeForm.get('salary').hasError('required')">Bạn phải điền nội dung</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Ngày sinh:
+      <input type="date" class="form-control" formControlName="dateOfBirth" >
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="employeeForm.get('dateOfBirth').invalid && employeeForm.get('dateOfBirth').touched">
+    <span *ngIf="employeeForm.get('dateOfBirth').hasError('required')">Bạn phải điền nội dung</span>
+    <span *ngIf="employeeForm.get('dateOfBirth').hasError('pattern')">Ngày sinh phải đúng định dạng ngày giờ theo format DD/MM/YYYY</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      CMND:
+      <input type="text" class="form-control" formControlName="idCard">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="employeeForm.get('idCard').invalid && employeeForm.get('idCard').touched">
+    <span *ngIf="employeeForm.get('idCard').hasError('required')">Bạn phải điền nội dung</span>
+    <span *ngIf="employeeForm.get('idCard').hasError('pattern')">Số CMND phải đúng định dạng XXXXXXXXX hoặc XXXXXXXXXXXX (X là số 0-9</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Điện thoại
+      <input type="text" class="form-control" formControlName="phone">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="employeeForm.get('phone').invalid && employeeForm.get('phone').touched">
+    <span *ngIf="employeeForm.get('phone').hasError('required')">Bạn phải điền nội dung</span>
+    <span *ngIf="employeeForm.get('phone').hasError('pattern')">Số điện thoại phải đúng định dạng 090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Email
+      <input type="email" class="form-control" formControlName="email">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="employeeForm.get('email').invalid && employeeForm.get('email').touched">
+    <span *ngIf="employeeForm.get('email').hasError('required')">Bạn phải điền nội dung</span>
+    <span *ngIf="employeeForm.get('email').hasError('pattern')">Địa chỉ email phải có định dạng abc@xyz.ijk</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Địa chỉ
+      <input type="text" class="form-control" formControlName="address">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="employeeForm.get('address').invalid && employeeForm.get('address').touched">
+    <span *ngIf="employeeForm.get('address').hasError('required')">Bạn phải điền nội dung</span>
+  </div>
+  <div class="form-group row">
+  <label class="col">
+    Vị trí
+    <select formControlName="position" class="form-control">
+      <option value="">Chọn</option>
+      <ng-container *ngFor="let position of positions">
+        <option value="{{position.name}}">{{position.name}}</option>
+      </ng-container>
+    </select>
+  </label>
+</div>
+  <div class="alert alert-danger" role="alert" *ngIf="employeeForm.get('position').invalid && employeeForm.get('position').touched">
+    <span *ngIf="employeeForm.get('position').hasError('required')">Bạn phải điền nội dung</span>
+  </div>
+
+  <div class="form-group row">
+    <label class="col">
+      Trình độ
+      <select formControlName="level" class="form-control">
+        <option value="">Chọn</option>
+        <ng-container *ngFor="let level of levels">
+          <option value="{{level.name}}">{{level.name}}</option>
+        </ng-container>
+      </select>
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="employeeForm.get('level').invalid && employeeForm.get('level').touched">
+    <span *ngIf="employeeForm.get('level').hasError('required')">Bạn phải điền nội dung</span>
+  </div>
+
+  <div class="form-group row">
+    <label class="col">
+      Bộ phận
+      <select formControlName="part" class="form-control">
+        <option value="">Chọn</option>
+        <ng-container *ngFor="let part of parts">
+          <option value="{{part.name}}">{{part.name}}</option>
+        </ng-container>
+      </select>
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="employeeForm.get('part').invalid && employeeForm.get('part').touched">
+    <span *ngIf="employeeForm.get('part').hasError('required')">Bạn phải điền nội dung</span>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-info" type="submit">Thêm</button>
+  </div>
+</form>
+
+
+

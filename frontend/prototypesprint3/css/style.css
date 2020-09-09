@@ -1,0 +1,108 @@
+.searchFollow{
+    height: 200px;
+}
+.resultFollow{
+    height: 430px;
+}
+.rColMain{
+    position: relative;
+}
+.rCol{
+    border: orange solid 2px;
+    position: absolute;
+    top: 15px;
+    left: 33px;
+    width: 90%;
+    height: 90%;
+}
+.resultSearch{
+    position: relative;
+}
+.result{
+    border: orange solid 2px;
+    position: absolute;
+    top: 15px;
+    left: 33px;
+    width: 95%;
+    height: 90%;
+}
+.titleIn{
+    font-size: 20px;
+    width:30%;
+    margin-top:-19px;
+    margin-left:5px;
+    background:white;
+    text-align: center;
+}
+.titleIn2{
+    font-size: 20px;
+    width:10%;
+    margin-top:-19px;
+    margin-left:5px;
+    background:white;
+    text-align: center;
+}
+.buttonStatic{
+    background: rgb(238, 159, 31);
+}
+.inputRound{
+    border-radius: 15px;
+}
+.paddingIn{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.pag {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.buttonTK{
+    position: relative;
+}
+.buttonTK2{
+    position: absolute;
+    top: 11px;
+}
+.pag1{
+    position: relative;
+}
+.pag2{
+    position: absolute;
+    right: 4%;
+}
+.page-link{
+    color: black;
+    border: 1px solid black;
+}
+.paddingInResult{
+    padding-left: 30%;
+}
+/* NavBar */
+.nab{
+    height: 50px;
+    margin-bottom: 20px;
+}
+.nab1{
+    border: black solid 2px;
+}
+.nab2{
+    border-top: black solid 2px;
+    border-right: black solid 2px;
+    border-bottom: black solid 2px;
+}
+.padNab{
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.nab a{
+    color: black;
+    text-decoration: none;
+    padding-top: 10px;
+}
+.nabAdmin{
+    font-size: 20px;
+}
